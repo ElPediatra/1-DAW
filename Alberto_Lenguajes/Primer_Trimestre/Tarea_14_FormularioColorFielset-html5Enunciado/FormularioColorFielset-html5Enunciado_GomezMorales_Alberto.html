@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FormularioColorFielset-html5Enunciado - Alberto Gómez Morales</title>
+
+    <!--Icono Web de la Ranita-->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body{font-family: Arial; font-weight: bold; width: 50%; margin: auto;        }
+        h1{color: #b42828;}
+        h3{color: #b42828;}
+        table{padding: 5px; width: 100%;}
+        th{text-align: left;}
+        .clarito{background-color: olive; color: white; text-align: center; border: 1px solid black; width: 200px;}
+        .verdeoscuro{background-color: lightgreen; padding: 10px 10px 20px 10px;}
+        .verdeoscuro .clarito{padding: 10px;}
+        .borde{border-spacing: 10px 0px;}
+        .centrado{text-align: center;}
+        ::placeholder{color: black;} /*Para que aparezca texto en el comentario y se quite al escribir*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>FORMULARIO QUE SE ABRE A SI MISMO</h1>
+
+        <!--Inicio del Formulario-->
+        <form name="formulario" action="#" method="get" enctype="text/plain">
+
+            <!--Tabla de Datos Básicos-->
+            <fieldset>
+                <legend>Datos básicos</legend>
+                <table>
+                    <tr>
+                        <td class="clarito">Nombre: (*)</td>
+                        <td><input type="text" name="nombre" title="Introduzca su nombre" size="20" maxlength="40" autocomplete="on"  autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td class="clarito">Apellido: (*)</td>
+                        <td><input type="text" name="apellido" title="Introduzca su apellido" size="20" maxlength="40" autocomplete="on" required></td>
+                    </tr>
+                    <tr>
+                        <td class="clarito">Correo electrónico: (*)</td>
+                        <td><input type="email" name="email" title="Introduzca su e-mail" placeholder=".....@....." autocomplete="on" required></td>
+                    </tr>
+                    <tr>
+                        <td class="clarito">Población:</td>
+                        <td><input type="text" name="poblacion" title="Introduzca su población" size="20" maxlength="40" autocomplete="on"></td>
+                    </tr>
+                    <tr>
+                        <td class="clarito">Provincia:</td>
+                        <td><input type="text" name="provincia" title="Introduzca su provincia" size="20" maxlength="40" autocomplete="on"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h3>(Campos con asterisco son campos obligatorios)</h3></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+
+            <!--Tabla de Datos Adicionales-->
+            <fieldset>
+                <legend>Datos Adicionales</legend>
+                <table class="verdeoscuro borde">
+                    <tr>
+                        <td class="clarito">Edad:</td>
+                        <td class="clarito">¿Cómo nos conociste?</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            <input type="radio" name="edad" title="Edad entre 0 y 20 años" autocomplete="on">0-20
+                            <input type="radio" name="edad" title="Edad entre 20 y 40 años" autocomplete="on" checked>20-40
+                            <input type="radio" name="edad" title="Edad entre 40 y 60 años" autocomplete="on">40-60
+                            <input type="radio" name="edad" title="Edad entre 60 y 100 años" autocomplete="on">60-100
+                        </td>
+                        <td><input type="checkbox" name="conocer" title="Nos conciste a través de un amigo" autocomplete="on" value="amigo">A través de un amigo.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conocer" title="Nos conciste a través de un buscador" autocomplete="on" value="buscador">A través de un buscador.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conocer" title="Nos conciste navegando por la red" autocomplete="on" value="navegando">Navegando por la red.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conocer" title="Nos conciste de otra manera" autocomplete="on" value="otros">Otros</td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br>
+
+            <!--Tabla de Datos Complementarios-->
+            <fieldset>
+                <legend>Datos Complementarios</legend>
+                <table>
+                    <tr>
+                        <td>Opinión sobre nuestra página web</td>
+                        <td>Tiene alguna sugerencia...</td>
+                    </tr>
+                    <tr>
+                        <td><textarea cols="40" rows="5" title="Escriba aquí su opinión sobre nuestra página web" placeholder="Escriba aquí su opinión..." autocomplete="on"></textarea></td>
+                        <td><textarea cols="40" rows="5" title="Escriba aquí sus sugerencias para mejorar nuestra página web" placeholder="Escriba aquí sus sugerencias..." autocomplete="on"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>¿Cuánto navegas por internet? (Señala la opción que más se acerque)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="horas" size="2">
+                                <option value="2 horas x día">2 horas x día</option>
+                                <option value="4 horas x día">4 horas x día</option>
+                                <option value="10 horas x semana">10 horas x semana</option>
+                                <option value="20 horas x mes">20 horas x mes</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--Botones de enviar y borrar-->
+                <table class="verdeoscuro">
+                    <tr>
+                        <td class="centrado"><input type="submit" value="Enviar formulario"></td>
+                        <td class="centrado"><input type="reset" value="Borrar formulario"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

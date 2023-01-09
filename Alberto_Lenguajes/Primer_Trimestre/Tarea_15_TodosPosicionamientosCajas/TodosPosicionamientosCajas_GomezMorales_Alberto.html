@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <title>TodosPosicionamientosCajas - Alberto Gómez Morales</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body{background-color: grey;}
+        #principal{position: relative; width: 250px; height: 250px; background-color: lightgreen; margin: 20px; border: black 20px solid;}
+        #normal{background: darkblue; width: 50px; height: 50px; position: relative; left: 10px; top: 10px;}
+        #absoluto{background: darkblue; width: 50px; height: 50px; position: absolute; left: 200px;}
+        #relativo{background: darkblue; width: 50px; height: 50px; position: relative; top: 20px;}
+        #fijado{background: darkblue; width: 50px; height: 50px; position: fixed;}
+    </style>
+</head>
+
+<body>
+    <!--Caja1 posición normal-->
+    <div id="principal">
+        <div id="normal"></div>
+    </div>
+    <!--Caja2 posición absoluta-->
+    <div id="principal">
+        <div id="absoluto"></div>
+    </div>
+    <!--Caja3 posición relativa-->
+    <div id="principal">
+        <div id="relativo"></div>
+    </div>
+    <!--Caja4 posición fixed-->
+    <div id="principal">
+        <div id="fijado"></div>
+    </div>
+
+</body>
+</html>

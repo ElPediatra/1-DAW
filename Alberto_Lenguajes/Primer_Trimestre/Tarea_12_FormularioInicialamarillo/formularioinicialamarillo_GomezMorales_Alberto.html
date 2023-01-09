@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FormularioInicialamarillo - Alberto Gómez Morales</title>
+    <style>
+        table{font-family: Arial; width: 30%;}
+        th{text-align: left;}
+        input, textarea{background-color: yellow; border: 1px dotted black; width: 99%; padding: 2px;}
+        input[type=reset],input[type=submit]{background-color: cyan; color: blue; font-weight: bold; width: auto; border: 0; padding: 5px 20px 5px 20px;}
+        .jump{padding-bottom: 15px;}
+        .right{text-align: right;}
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+
+<body>
+    <table>
+        <form name="formulario" action="mailto:daniel.marcos.guerra@gmail.com" method="get" enctype="text/plain">
+        <tr>
+            <th colspan="2" class="jump">Formulario de contacto.</th>
+        </tr>
+        <tr>
+            <td colspan="2">Nombre:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="jump"><input type="text" name="nombre" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">E-Mail:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="jump"><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">Asunto:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="jump"><input type="text" name="asunto" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">Mensaje:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="jump"><textarea name="texto"rows="8"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2">Adjuntar archivo:</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="jump"><input type="file" name="archivo"></td>
+        </tr>
+        <tr>
+            <td><input type="reset" name="restablecer" value="Restablecer"></td>
+            <td class="right"><input type="submit" name="enviar" value="Enviar mensaje"></td>
+        </tr>
+        </form>
+    </table>
+</body>
+</html>

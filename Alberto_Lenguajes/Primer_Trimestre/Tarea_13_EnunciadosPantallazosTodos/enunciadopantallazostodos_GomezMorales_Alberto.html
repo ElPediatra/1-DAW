@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EnunciadosPantallazosTodos - Alberto Gómez Morales</title>
+    <style>
+
+        /*Primera Tarea -- Formulario Nombre, Correo, Contraseña*/
+        .primera table{font-family: Arial; border: 2px solid rgb(2, 150, 150); background-color: rgb(234, 226, 226); margin: auto; padding: 10px 20px 10px 20px;}
+        .primera th{text-align: center; font-size: 24px;}
+        .negrita, .gris{text-align: right;}
+        .negrita{font-weight: bold;}
+        .gris{color: gray;}
+        .primera input[type=submit]{background-color: grey; color: white; font-weight: bold; padding: 10px 20px 5px 20px;}
+
+        /*Segunda Tarea -- Formulario Acceso, Datos Personales*/
+        .segunda{font-family: Arial; background-color: lightyellow; width: 50%; margin: auto; border: 1px solid black; padding-bottom: 20px;}
+        .segunda h3{padding-left: 20px; font-style: italic;}
+        .segunda form{background-color: white; width: 30%; margin: auto; padding-bottom: 50px;}
+        .segunda fieldset{width: 50%;}
+        .segunda legend{color: blue; font-weight: bold;}
+        .segunda input, .segunda textarea, .segunda select{width: 200px;}
+        .segunda input[type=radio], .segunda input[type=checkbox]{width: auto;}
+        .segunda input[type=submit]{width: auto; border-radius: 10px;}
+        .margen{padding-top: 10px;}
+
+        /*Tercera Tarea -- Panel Anterior y Siguiente*/
+        .tercera{background-color: lightgrey; width: 50%; margin: auto; border: 1px solid silver; font-weight: bold;}
+        .tercera table{margin: auto; width: 100%; padding: 5px;}
+        .tercera td:last-child{text-align: right;}
+        .tercera a{text-decoration: none; color: black;}
+        
+        /*Cuarta Tarea -- Enlaces 1, 2 y 3*/
+        .cuarta{width: 50%; margin: auto;}
+        .cuarta li{list-style-type: none; padding-bottom: 15px;}
+        .cuarta a{color: #CC0000;}
+        .cuarta a:hover{color: #FFF; background-color: #CC0000;}
+        .cuarta a:visited{color: #CCC;}
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+
+<body>
+    <!-- Primera Tarea -- Formulario Nombre, Correo, Contraseña -->
+    <div class="primera">
+        <table>
+            <form action="mailto:albertogomezmorales1994@gmail.com" method="get" enctype="text/plain">
+                <tr>
+                    <th colspan="2">Formulario</th>
+                </tr>
+                <tr>
+                    <td class="negrita">Nombre</td>
+                    <td rowspan="2"><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Ingrese su nombre</td>
+                </tr>
+                <tr>
+                    <td class="negrita">Email (Correo)</td>
+                    <td rowspan="2"><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Ingrese su email</td>
+                </tr>
+                <tr>
+                    <td class="negrita">Password (Contraseña)</td>
+                    <td rowspan="2"><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td class="gris">Mínimo 6 caracteres</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="enviar" value="Enviar"></td>
+                </tr>
+            </form>
+        </table>
+    </div>
+
+    <br>
+        <!-- Segunda Tarea -- Datos de acceso y personales -->
+    <div class="segunda">
+        <h3>PRÁCTICA: Codifica el siguiente formulario:</h3>
+        <form action="http://www.iuscanada.com/form/script.php" method="get" enctype="text/plain">
+            <fieldset>
+                <legend>Datos de acceso</legend>
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="n-usuario"></td>
+                    </tr>
+                    <tr>
+                        <td class="margen">Pass:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="p-usuario"></td>
+                    </tr>
+                    <tr>
+                        <td class="margen">Detalles:</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="details" rows="4">Detalle</textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <table>
+                    <tr>
+                        <td>Ciudad de origen:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="ciudad">
+                                <option value="trs">Terrasa</option>
+                                <option value="sbd">Sabadell</option>
+                                <option value="bcn" selected>Barcelona</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="margen">Estado civil:</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="civil" value="casado">Casado
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="civil" value="soltero" checked>Soltero
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="civil" value="divorciado">Divorciado
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="margen">
+                            <input type="checkbox" name="mayor" value="mayor">Soy mayor de edad
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="submit">
+        </form>
+    </div>
+
+    <br>
+    <!-- Tercera Tarea -- Anterior / Siguiente -->
+
+    <div class="tercera">
+        <table>
+            <tr>
+                <td><a href="#anterior">« Anterior</a></td>
+                <td><a href="#siguiente">Siguiente »</a></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    
+    <!-- Cuarta Tarea -- 3 Enlaces -->
+
+    <div class="cuarta">
+        <ul>
+            <li><a href="https://open.spotify.com/track/7MkylDYvKTSuWgrsBhHlsG?si=dd892f4fb4144a00">Enlace número 1 (Duki)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=zwaEoVtYY7A">Enlace número 2 (Ibai)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=kE7QWnthegE">Enlace número 3 (Lala)</a></li>
+        </ul>
+    </div>
+</body>
+</html>

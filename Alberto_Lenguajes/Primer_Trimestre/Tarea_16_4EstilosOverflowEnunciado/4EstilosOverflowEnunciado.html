@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>4EstilosOverflowEnunciado - Alberto Gómez Morales</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body{background-color: grey; width: 30%;} /* Para que esté el título centrado con la caja */
+        .borde{border: 5px dotted black; display: flex;  width: fit-content;}
+        h1{text-align: center;}
+        div div{padding: 10px;} /* Centrado y tamaño de cajas */
+        div div div{width: 100px;height: 200px;} /* Centrado y tamoño de cajas */
+        .visible{overflow: visible; background-color: rgb(255, 239, 213);border: 3px solid red;}
+        .hidden{overflow: hidden; background-color: rgb(255, 239, 213); border: 3px solid blue;}
+        .scroll{overflow: scroll; background-color: rgb(255, 239, 213); border: 3px solid green;}
+        .auto{overflow: auto; background-color: rgb(255, 239, 213); border: 3px solid orange;}
+    </style>
+</head>
+
+<body>
+    <h1>overflow css</h1>
+    <div class="borde">
+        <!--Caja con overflow para texto visible-->
+        <div>
+            <h1>visible</h1>
+            <div class="visible">
+                Caja 1
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <!--Caja con overflow para texto escondido-->
+        <div>
+            <h1>hidden</h1>
+            <div class="hidden">
+                Caja 2
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <!--Caja con overflow para texto con scroll-->
+        <div>
+            <h1>scroll</h1>
+            <div class="scroll">
+                Caja 3
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+        <!--Caja con overflow para texto con formato auto-->
+        <div>
+            <h1>auto</h1>
+            <div class="auto">
+                Caja 4
+                aprender a programar.com web de didáctica y divulgación de la programación cursos humor y más El tutorial css desde cero permite aprender sin tener conocimientos previos
+            </div>
+        </div>
+    </div>
+</body>
+</html>
