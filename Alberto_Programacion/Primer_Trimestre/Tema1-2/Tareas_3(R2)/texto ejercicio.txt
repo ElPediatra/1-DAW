@@ -1,0 +1,2 @@
+Un número entero al usuario
+Dice si es par
