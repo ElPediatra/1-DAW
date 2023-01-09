@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!--Alberto Gómez Morales 1º DAW -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VariasListasEnunciado_Alberto</title>
+    
+    <style>
+        h1 {font-weight: bold;}
+        li.bold {font-weight: bold;}
+        li.subrayado {text-decoration: underline; color: blue;}
+        dt {font-style: italic;}
+        dd.bold {font-weight: bold;}
+    </style>
+</head>
+
+<body>
+
+<h1>Menú</h1>
+
+    <ul type="disc">
+        <li>Inicio</li>
+        <li class="bold">Noticias<ul type="circle">
+            <li class="subrayado">Recientes</li>
+            <li class="bold subrayado">Más leídas</li>
+            <li class="subrayado">Más valoradas</li>
+        </ul></li>
+        <li> Artículos <ol type="1" start="1">
+            <li class="bold">XHTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Otros</li>
+        </ol></li>
+        <li>Contacto<dl>
+            <dt>Email</dt><dd class="bold"> nombre@direccion.com</dd>
+            <dt>Teléfono</dt><dd> 900 900 900</dd>
+            <dt>Fax </dt><dd>900 900 900</dd>
+        </dl></li>
+    </ul>
+</body>
+</html>
