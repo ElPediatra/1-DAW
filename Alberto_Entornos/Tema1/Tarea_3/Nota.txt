@@ -1,0 +1,1 @@
+Hay que indicar los valores con >= ó <= en caso de que se quieran incluir, no indicar simplemente el valor en pregunta.
