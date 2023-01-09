@@ -1,0 +1,5 @@
+Abrir dirección de la carpeta
+
+javac (Nombre del archivo con .java) --> Crea el archivo class
+java (Nombre del archivo sin .java/.class) --> Ejecuta el programa de estar correcto
+
