@@ -1,0 +1,17 @@
+1º - Instalación de los programas para
+de máquinas virtuales
+
+2º - Creación MV para Ubuntu (Virtual Box):
+		+ Nombre Ubuntu MV
+		+ 4GB Memoria RAM
+		+ Disco duro dinámico 250 GB
+
+3º Creación MV para Windows 10 (Virtual Box):
+		+ Nombre Windows MV
+		+ 4GB Memoria RAM
+		+ Disco duro dinámico 300 GB
+
+4º Crear una instantanea para cada una de las máquinas
+con nombre MV Limpia.
+
+5º Crear una MV con VMware Workstation Pro (versión de prueba).
