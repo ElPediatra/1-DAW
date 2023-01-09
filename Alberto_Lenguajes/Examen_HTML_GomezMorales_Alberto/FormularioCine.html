@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="favicon.png">
+    <title>Formulario-Cine</title>
+    <style>
+        body{background-color: rgb(218, 199, 116);}
+        fieldset{border-radius: 20px; width: 60%;margin-left: 20%;border: 3px solid #000000;}
+        h3{text-align: center;}
+        h4{text-align: center;}
+        input {border-color: red;}
+        textarea{text-align: center;border-color: red;}
+        img{width: 350px;px ;height: 150px;}
+        .boton{border-color: red;width: 150px; background-color:#D28D10;}
+        .fondonaranja {background-color: #D28D10;}
+        
+    </style>
+</head>
+<body>
+    <hr>
+    <h3 class="fondonaranja">Regístrate y disfruta de nuestras películas</h2>
+    <img src="cine.jpeg"></img>
+    <form>
+    <fieldset>
+        <legend class="fondonaranja">DATOS PERSONALES</legend>
+            <table>
+                <tr>
+                    <td><label for="Nombre">Tu nombre *</label></td>
+                    <td><input class="fondonaranja" id="Nombre" type="text" placeholder="Tu nombre" required autofocus title="Introduce nombre" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td><label for="Contraseña">Contraseña *</label></td>
+                    <td><input class="fondonaranja" type="password" id="Contraseña" placeholder="Contraseña" title="Contraseña" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td style="width: 100px;"><label>Email:(*) </label></td>
+                    <td><input class="fondonaranja" type="email" name="email" title="Escriba un correo real" placeholder="usuario@dominio.com" required="" ></td>
+                </tr>
+                <tr>
+                    <td><label for="fecha">Fecha de nacimiento:</label></td>
+                    <td><input class="fondonaranja" id="fecha" type="date" placeholder="fecha" required autofocus title="Introduce nombre" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr><td colspan="2"></td></tr>
+
+                <tr>
+                    <td>¿Cuántas películas ves al mes (1-10)?</td>
+                    <td><input type="range" name="rangoPelis" id="rango"checked></td>
+                </tr>
+                <tr>
+                    <td>¿Cuál crees que es el color ideal de una película</td>
+                    <td><input type="color" name="color"id="color"checked></td>
+                </tr>
+                <tr>
+                    <td class="izquierda">¿Cuántas películas ves al mes (1-10)?</td>
+                    <td><select name="numero" id="numero">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    <input type="checkbox"><label>¿Suscribirte al boletín de novedades?</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comentarios</td>
+                    <td><textarea class="fondonaranja" id="comentarios" cols="60" rows="8">*ESCRIBE COMENTARIOS*</textarea></td>
+                </tr>
+                <tr>
+                    <td>¿Cuanto te gusta el cine?</td>
+                    <td>
+                        <input type="radio" name="Cuanto" id="Mucho"> <label for="Mucho">Mucho</label> 
+                        <input type="radio" name="Cuanto" id="No Mucho"> <label for="No Mucho">No Mucho</label>
+                        <input type="radio" name="Cuanto" id="Un poco"> <label for="Un Poco">Un poco</label>
+                        <input type="radio" name="Cuanto" id="Nada"> <label for="Nada">Nada</label>
+                    </td>
+                </tr>
+            </table>
+    </fieldset>
+    <br>
+     <center>
+        <input class="boton" type="submit" value="Enviar los datos">
+        <span style="margin-left: 100px;">
+        <input class="boton" type="reset" value="Restablecer">
+        </span>
+    </center>
+    </form>
+
+    <h4><a href="indice.html">VOLVER</a></h4>
+</body>
+</html>
