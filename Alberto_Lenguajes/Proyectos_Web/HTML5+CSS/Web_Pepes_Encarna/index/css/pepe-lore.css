@@ -1,0 +1,206 @@
+/*
+ * General página
+ */
+
+ body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	font-size: 16px;
+	line-height: 24px;
+	padding-top: 80px;
+	background-size: 1000px;
+}
+
+h1 {
+	font-size: 37px;
+    line-height: 21px;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 32px;
+    line-height: 16px;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 24px 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0%; /* No quiero que me espacie las imagenes */
+}
+
+/*
+ * Cabecera de la página
+ */
+#principal-cabecera {
+	background: #333;
+	color: white;
+	height: 80px;
+	
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+}	
+	#principal-cabecera a {
+		color: greenyellow;
+	}
+	
+/*
+ * Logo
+ */
+#logo-cabecera {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-cabecera:hover {
+		color: #0b76a6;
+	}
+	
+	#logo-cabecera .nombre-web {
+		display: block;
+		font-weight: 700;
+		font-size: 19px;
+	}
+	
+	#logo-cabecera .subtitulo {
+		display: block;
+		font-weight: 300;
+		font-size: 13px;
+		color: #999;
+	}
+	
+
+/*
+ * Menú Cabecera
+ */
+nav {
+	float: right;
+}
+	nav ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 20px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+			
+			/* Opción desplegable*/
+
+			.desplegable {
+				display: inline-block;
+				position: relative;
+			}
+			
+			.contenido {
+				display: none;
+				background-color: #333;
+			}
+
+			.desplegable:hover .contenido{
+				display: block;
+				padding: 0 10px;
+				text-decoration: none;
+			}
+			.contenido:hover{
+				background-color: #0b76a6;
+			}
+
+
+/*
+ * Cuerpo de la página (contenido)
+ */
+
+
+article {
+    display: inline-block;
+	border: #333 solid;
+}
+
+#cuerpo-principal {
+	background: white;
+	width: 90%;
+	max-width: 1500px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+	#cuerpo-principal header,
+	#cuerpo-principal .contenido2 {
+		padding: 40px;
+	}
+
+    /* Tabla documental y Peepo */
+    #documental {
+        padding: 100px;
+        margin: 50px;
+        border: 2px solid #333;
+    }
+
+	p {
+		text-align: center;
+	}
+
+	span {
+		font-weight: bold;
+	}
+	
+	.figura {
+		display: flex;
+		margin: auto;
+		justify-content:center;
+	}
+
+/*
+ * Pie de página
+ */
+
+#pie-pagina {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+}
+	#pie-pagina p {
+		margin: 0;
+	}
+	
+	#pie-pagina a {
+		color: white;
+	}
+
+	#pie-pagina .iconos {
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+	}

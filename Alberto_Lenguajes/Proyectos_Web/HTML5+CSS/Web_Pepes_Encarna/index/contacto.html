@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacto - Pepe the Frog</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="icon" type="image" href="favicon.png">
+</head>
+
+<!-- Página para el formulario de la WEB Pepe the Frog -->
+
+<body background="imagenes/fondo-pepe.jpg">
+	
+	<header id="principal-cabecera"> <!-- Cabecera página -->
+		
+		<a id="logo-cabecera" href="index.html"> <!-- Título Web -->
+			<span class="nombre-web">Pepe the Frog - Web</span>
+			<span class="subtitulo">Trabajo Lenguaje de Marcas</span>
+		</a>
+
+		<nav> <!-- Menú Principal -->
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li class="desplegable">
+					<a href="pepe-lore.html">Pepe Lore</a>
+					<a class="contenido" href="pepe-lore.html#historia">Historia</a>
+					<a class="contenido" href="pepe-lore.html#documental">Documental</a>
+					<a class="contenido" href="pepe-lore.html#Little-peepo">Little Peepo</a>
+				</li>
+				<li><a href="galeria.html">Galería</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	
+	<section id="cuerpo-principal"> <!-- Cuerpo de la página -->
+	
+		<article> <!-- Contenido de la página -->
+			<header>
+				<h1> <figure class=""><img src="imagenes/Logo.png" width="150" height="150"/> Pepe the Frog - Contacto <img src="imagenes/Logo.png" width="150" height="150"/></figure> </h1>
+			</header>
+
+			<div class="contenido2">
+				<h2>Formulario</h2>
+                <form action="../formulario.php" method="post" autocomplete="on">
+                    <table>
+                        <tr>
+                            <td class="izquierda"><label for="nombre" >Nombre: </label></td>
+                            <td class="derecha"><input type="text" name="nombre" id="nombre" class="texto" required autofocus placeholder="Tu nombre"></td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda"><label for="apellidos">Apellidos: </label></td>
+                            <td class="derecha"><input type="text" name="apellidos" id="nombre" class="texto" required placeholder="Tus apellidos"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="radio" name="genero" id="genero">
+                                <label for="genero">Hombre</label>
+                                <input type="radio" name="genero" id="genero">
+                                <label for="genero">Mujer</label>
+                                <input type="radio" name="genero" id="genero">
+                                <label for="genero">Otros</label>
+								<input type="radio" name="genero" id="genero">
+                                <label for="genero">Prefiero no contestar</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda"><label for="edad">Edad: </label></td>
+                            <td class="derecha"><input type="number" name="edad" id="edad" style="width: 5%;" placeholder="Edad" min="0" max="99"></td>
+                        </tr>
+						<tr>
+                            <td class="izquierda"><label for="fecha">Fecha de nacimiento: </label></td>
+                            <td class="derecha"><input type="date" name="fecha" id="fecha" required ></td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda"><label for="elo">Pepe Favorito: </label></td>
+                            <td class="derecha">
+                                <select name="elo" id="elo" required >
+                                    <option value="hierro">Pepe Confucio</option>
+                                    <option value="bronce">DJ Pepe</option>
+                                    <option value="plata">Kirby Pepe</option>
+                                    <option value="oro">Pepe Hitler</option>
+                                    <option value="platino">Dance Pepe</option>
+                                    <option value="diamante">Sonic Pepe</option>
+                                    <option value="maestro">Nude Pepe </option>
+                                    <option value="grandmaster">Minion Pepe</option>
+                                    <option value="aspirante">Avatar Pepe</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda"><label for="correo">Correo electrónico: </label></td>
+                            <td class="derecha"><input type="correo" name="correo" id="correo" required class="texto" placeholder="correo@correo.correo"></td>
+                        </tr>
+                        <tr>
+                            <td class="izquierda"><label for="telefono">Telefono de contacto: </label></td>
+                            <td class="derecha"><input type="telefono" name="telefonn" id="telefono" class="texto" placeholder="666 777 888" minlength="9" maxlength="9"></td>
+                        </tr>
+						<tr>
+                            <td class="izquierda"><label for="color">¿De qué color suele ser Pepe la rana?: </label></td>
+                            <td class="derecha"><input type="color" name="color" id="color" class="sinBorde"></td>
+                        </tr>
+						<tr>
+                            <td class="izquierda"><label for="motivo">Motivos: </label></td>
+                            <td class="derecha"><textarea name="motivo" id="motivo" cols="60" rows="10" required minlength="40" placeholder="Indica los motivos por los que quieres que te aceptemos en la Pepe Army"></textarea></td>
+                        </tr>
+						<tr>
+                            <td colspan="2"><input type="checkbox" name="check" id="checks"><label for="check">Quiero información actualizada.</label><input type="checkbox" name="check" id="checks"><label for="check">Quiero spam a diario.</label><input type="checkbox" name="check" id="checks"><label for="check">Quiero invitaciones a eventos.</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="envio"><input type="submit" value="Enviar datos"><input type="reset" value="Reestablecer"></td>
+                        </tr>
+                    </table>
+                </form>
+			</div>
+
+			<div class="contenido2"> <!-- Mapa con localización -->
+				<h2> Localizanos </h2>
+				<br>
+
+				<p> Sede actual en I.E.S. Murgi, más info <a href="http://www.iesmurgi.org/web3/">aquí</a>.</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.517580259334!2d-2.818067348812732!3d36.78213897631696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7042fd28f10ad9%3A0xb13e2a63490ff0cb!2sI.E.S.%20MURGI!5e0!3m2!1ses!2ses!4v1673455444125!5m2!1ses!2ses" width="600" height="450" style="border:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</article>
+	</section> 
+
+	<footer id="pie-pagina"> <!-- Pie de página -->
+		<p> &copy; 2022 Alberto Gómez Morales</p>
+    	<p> 1º DAW - <a href="http://www.iesmurgi.org/web3/">I.E.S. Murgi</a></p>
+
+		<div class="iconos"> <!-- Enlaces a redes sociales -->
+			<a href="https://twitter.com/PepetheFog" title="Twitter"><img src="imagenes/IconoTwitter.png" width="40" height="40" /></a>
+			<a href="https://www.instagram.com/pepethe_frog/" title="Instagram"><img src="imagenes/IconoInstagram.png" width="40" height="40" /></a>
+			<a href="https://www.youtube.com/@randompepememe3963" title="YouTube"><img src="imagenes/IconoYoutube.png" width="40" height="40" /></a>
+			<a href="https://discord.com/invite/online" title="Discord"><img src="imagenes/IconoDiscord.png" width="40" height="40" /></a>
+		  </div>
+	</footer> 
+
+</body>
+</html>
