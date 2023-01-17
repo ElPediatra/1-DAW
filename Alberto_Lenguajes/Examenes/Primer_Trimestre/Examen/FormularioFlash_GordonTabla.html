@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormularioFlash_GordonTabla</title>
+    <style>
+        body{background-color: rgb(207, 193, 131);}
+        h2{text-align: center; color: red}
+        fieldset{border-radius: 20px; width: 40%;margin-left: 20%;border: 1px solid red;}
+        input,textarea{background-color: white; border-color: red;}
+        textarea{text-align: center;}
+        .botones{background-color:orange; border-color: red;width: 150px;}
+        .volver{color: rgb(4, 4, 163);margin-left: 50%; font-size: 40px;font-weight: bold;text-align: center;}
+        img{width: 350px;px ;height: 150px;}
+        hr{background-color: gray;}
+        
+    </style>
+</head>
+<body>
+    <hr>
+    <img src="gordon.png"></img>
+    <h2>Registrate y disfruta de nuestras ventajas participando en los comics de Flash Gordon</h2>
+    <form>
+    <fieldset>
+        <legend>DATOS PERSONALES</legend>
+            <table>
+                <tr>
+                    <td><label for="Nombre">Tu nombre *</label></td>
+                    <td><input id="Nombre" type="text" placeholder="Tu nombre" required autofocus title="Introduce nombre" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td><label for="Contraseña">Contraseña</label></td>
+                    <td><input type="password" id="Contraseña" placeholder="Contraseña" title="Contraseña" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr>
+                    <td style="width: 100px;"><label>Correo electronico:(*) </label></td>
+
+                    <td><input type="email" name="email" title="Escriba un correo real" placeholder="usuario@dominio.com" required="" ></td>
+                </tr>
+                <tr>
+                    <td><label for="fecha">Fecha de nacimiento *</label></td>
+                    <td><input id="fecha" type="date" placeholder="fecha" required autofocus title="Introduce nombre" maxlength="20" autocomplete="on"></td>
+                </tr>
+                <tr><td colspan="2"><hr></td></tr>
+                <tr>
+                    <td>Promocion</td>
+                    <td>
+                        <input type="radio" name="Promocion" id="Ninguno" checked> <label for="Hombre">Ninguno</label> 
+                        <input type="radio" name="Promocion" id="Descuento 10%"> <label for="Mujer">Descuento 10%</label>
+                        <input type="radio" name="Promocion" id="Descuento 5%"> <label for="Mujer">Descuento 5%</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿Cuantos comics has leido(1-50)?</td>
+                    <td><input type="range" name="rango"id="rango"checked ></td>
+                </tr>
+                <tr>
+                    <td>¿Color de las mallas de Flas gordon?</td>
+                    <td><input type="color" name="color"id="color"checked></td>
+                </tr>
+                <tr>
+                    <td class="izquierda">¿Cuantos comics tienes?</td>
+                    <td><select name="numero" id="numero">
+                        <option value="0-5">0-5</option>
+                        <option value="6-10">6-10</option>
+                        <option value="11-15">11-15</option>
+                        <option value="16-20">16-20</option>
+                        <option value="21-25">21-25</option>
+                        <option value="26-5">26-30</option>
+                        <option value="31-35">31-35</option>
+                        <option value="36-5">36-40</option>
+                        <option value="41-45">41-45</option>
+                        <option value="46-5">46-50</option>
+                        <option value="51-55">51-55</option>
+                        <option value="56-5">56-60</option>
+                        <option value="61-65">61-65</option>
+                        <option value="66-5">66-70</option>
+                        <option value="71-75">71-75</option>
+                        <option value="76-5">76-80</option>
+                        <option value="81-85">81-85</option>
+                        <option value="86-5">86-90</option>
+                        <option value="91-95">91-95</option>
+                        <option value="96-100">96-100</option>
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comentarios</td>
+                    <td><textarea id="comentarios" cols="60" rows="8"></textarea></td>
+                </tr>  
+            </table>
+    </fieldset>
+    <br>
+     <center>
+        <input class="botones" type="submit" value="Enviar los datos">
+        <span style="margin-left: 100px;"><input class="botones" type="reset" value="Borra los datos"></span>
+    </center>
+    </form>
+</body>
+</html>
