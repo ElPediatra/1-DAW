@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    EJERCICIO 5. Haz un documento XML que contenga secciones de una página HTML, por ejemplo, las etiquetas y contenidos de HEAD (cabecera), la etiqueta P (párrafo) y una lista sin orden (<ul> <li> ...</ul>);. Hacer de dos formas
+– Una con secciones CDATA y
+– otra con entidades predefinidas.
+-->
+
+<raiz>
+    <datos>
+        <![CDATA[
+        <ul>
+            <li> Fútbol </li>
+            <li> Baloncesto </li>
+            <li> Tenis </li>
+            <li> Rugby </li>
+            <li> Remo </li>
+        </ul>
+        ]]>
+    </datos>
+    <entidades>
+    &lt;ul&gt;
+        &lt;li&gt; Fútbol &lt;/li&gt;
+        &lt;li&gt; Baloncesto &lt;/li&gt;
+        &lt;li&gt; Tenis &lt;/li&gt;
+        &lt;li&gt; Rugby &lt;/li&gt;
+        &lt;li&gt; Remo &lt;/li&gt;
+    &lt;/ul&gt;
+</entidades>
+</raiz>
