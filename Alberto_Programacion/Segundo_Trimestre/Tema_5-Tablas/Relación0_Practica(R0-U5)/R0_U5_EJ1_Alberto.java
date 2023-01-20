@@ -140,8 +140,88 @@ public static void mostrar(){
     }
 
     public static void ejercicio3(){
+        char palabra[], letra;
+        int dimension;
+        
+        do {
+            System.out.println("Dime de que dimensión quieres el vector:");
+            dimension=teclado.nextInt();
+        } while(dimension<=0); //La dimensión no puede ser negativa ni cero
+
+        palabra=new char[dimension];
+
+        for(int i=0;i<palabra.length;i++){
+            System.out.println("Posición: "+i+". Dame su valor: ");
+                letra=teclado.next().charAt(0);
+                palabra[i]=letra;
+            }
+
+        //Lo visualizamos por pantalla
+        System.out.println("Nuestro array de caracteres contiene: ");
+            for(int i=0;i<palabra.length;i++){
+                System.out.println(palabra[i]);
+            }
     }
 
     public static void ejercicio4(){
+        char palabra[] = ejercicio4_1();
+							System.out.print("Las palabra es: ");
+							ejercicio4_2(palabra);
+							System.out.println();
+							ejercicio4_3(palabra);
+							System.out.println();
+
     }
+
+    public static char[] ejercicio4_1(){
+        int rango;
+		char letra;
+		do {
+			System.out.println("Indicame el rango del vector:");
+			rango = teclado.nextInt();
+		} while (rango <= 0);
+		char vector[] = new char[rango];
+		for (int i = 0; i < vector.length; i++) {
+			System.out.println("Indicame la letra para el índice ["+i+"]:");
+			letra = teclado.next().charAt(0);
+			vector[i] = letra;
+		}
+		return vector;
+    }
+
+    public static void ejercicio4_2(int[] vector){
+        System.out.print("{");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector[i]);
+			if (i < vector.length - 1) {
+				System.out.print(",");
+			}
+		}
+		System.out.print("}");
+    }
+
+    public static void ejercicio4_2(char[] vector) {
+		System.out.print("{");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector[i]);
+			if (i < vector.length - 1) {
+				// System.out.print(",");
+			}
+		}
+		System.out.print("}");
+	}
+
+    public static void ejercicio4_3(char[] vector) {
+        char letra;
+		int contador = 0;
+		System.out.println("Indicame la letra que quieres buscar:");
+		letra = teclado.next().charAt(0);
+		for (int i = 0; i < vector.length; i++) {
+			if (Character.toLowerCase(vector[i]) == Character.toLowerCase(letra)) {
+				contador++;
+			}
+		}
+		System.out.println("La letra " + letra + " está escrita " + contador + " veces en la palabra.");
+    }
+
 }
