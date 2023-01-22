@@ -1,0 +1,14 @@
+Alberto Gómez Morales
+
+Ejercicio 3.-
+
+Crear USB Booteable con Windows 10
+	- Seleccionamos Dispositivo (Unidad USB)
+	- Seleccionamos imagen ISO.
+	- Seleccionamos esquema de partición MBR (Para que podemos instalar
+	también Ubuntu)
+	
+Pauso mientras se hace ya que tarda un poco.
+
+Ejercicio 4.-
+
