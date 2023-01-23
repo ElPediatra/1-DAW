@@ -1,0 +1,34 @@
+Alberto Gómez Morales
+
+Ejercicio 3.-
+
+Crear USB Booteable con Windows 10
+	- Seleccionamos Dispositivo (Unidad USB)
+	- Seleccionamos imagen ISO.
+	- Seleccionamos esquema de partición MBR (Para que podemos instalar
+	también Ubuntu)
+
+Ejercicio 4.-
+
+Creamos la máquina virtual para Windows.
+	- Seleccionamos la ISO.
+	- Seleccionamos la carpeta donde guardar la VM.
+	- Seleccionamos la cantidad de RAM y los procesadores.
+	- Iniciamos la MV he instalamos windows (dejando espacio para Ubuntu)
+	
+Ejercicio 5.-
+
+Asignamos la ISO de Ubuntu a la MV ya creada
+	- Seleccionamos el espacio libre de la MW
+	- Instalamos el S.O.
+
+Ahora le da por funcionar. Termino de instalar Ubuntu.
+
+Ejercicio 10.-
+
+- Actualizamos los paquetes disponibles
+- Instalamos Synaptic
+- Instamos un navegador
+- Desinstalamos synaptic
+- Actualizamos el sistema
+
