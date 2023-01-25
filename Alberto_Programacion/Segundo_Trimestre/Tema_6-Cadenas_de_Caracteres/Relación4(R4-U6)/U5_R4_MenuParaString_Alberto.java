@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays; //Para el ejercicio 5
 
 // Menú tareas y ejercicios libro
 
@@ -78,18 +79,23 @@ public class U5_R4_MenuParaString_Alberto{
                 break;
 
                 case 4:
+                    ejercicio4();
                 break;
 
                 case 5:
+                    ejercicio5();
                 break;
 
                 case 6:
+                    ejercicio6();
                 break;
 
                 case 7:
+                    ejercicio7();
                 break;
 
                 case 8:
+                    ejercicio8();
                 break;
 
                 case 0:
@@ -180,14 +186,14 @@ public class U5_R4_MenuParaString_Alberto{
         frase = teclado.nextLine();
 
         minuscula = frase.toLowerCase();
-        tildes = minuscula.replace("á", "a");
-        tildes = tildes.replace("é", "e");
-        tildes = tildes.replace("í", "i");
-        tildes = tildes.replace("ó", "o");
-        tildes = tildes.replace("ú", "u");
-        espacios = tildes.replace(" ", "");
-        comas = espacios.replace(",", "");
-        puntos = comas.replace(".", "");
+        tildes = minuscula.replaceAll("á", "a");
+        tildes = tildes.replaceAll("é", "e");
+        tildes = tildes.replaceAll("í", "i");
+        tildes = tildes.replaceAll("ó", "o");
+        tildes = tildes.replaceAll("ú", "u");
+        espacios = tildes.replaceAll(" ", "");
+        comas = espacios.replaceAll(",", "");
+        puntos = comas.replaceAll(".", "");
 
         inicio = 0;
         fin = puntos.length()-1;
@@ -206,4 +212,120 @@ public class U5_R4_MenuParaString_Alberto{
             System.out.println("La frase '"+ frase +"' no es palíndroma.");
         }        
     }
+    /* Opción 4 - Codificar un texto */
+    public static void ejercicio4(){
+        String frase;
+        String codificada="";
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Indica tu palabra/frase por favor: ");
+        frase = teclado.nextLine();
+
+        char codifica[] = frase.toLowerCase().toCharArray();
+        char clave1[] = {'e','i','k','m','p','q','r','s','t','u','v'};
+        char clave2[] = {'p','v','i','u','m','t','e','r','k','q','s'};
+
+        for(int i = 0; i < codifica.length; i++) {
+            for(int j = 0; j < clave1.length; j++){
+                if (codifica[i] == clave1[j]) {
+                    codifica[i] = clave2[j];
+                    break; /* Para que salte a la siguiente posición y no revise todas las letras para que no rompa el código */
+                }
+            }
+            codificada += codifica[i];
+        }
+
+        System.out.println("La palabra/frase "+frase+" codificada es '"+codificada+"'.");
+    }
+
+    /* Opción 5 - Anagrama de palabras */
+    public static void ejercicio5(){
+        String palabra1;
+        String palabra2;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Indica la primera palabra: ");
+        palabra1 = teclado.nextLine();
+        System.out.println("Indica la segunda palabra: ");
+        palabra2 = teclado.nextLine();
+
+        // Separamos las letras de las 2 frase
+        char cadena1[] = palabra1.toLowerCase().toCharArray();
+        char cadena2[] = palabra2.toLowerCase().toCharArray();
+
+        //Ordenamos los caracteres y los comparamos
+        Arrays.sort(cadena1);
+        Arrays.sort(cadena2);
+
+        if(Arrays.equals(cadena1, cadena2)){
+            System.out.println("Las palabras " +palabra1+ " y "+palabra2+" SI son anagramas.");
+        } else {
+            System.out.println("Las palabras " +palabra1+ " y "+palabra2+" NO son anagramas.");
+        }
+    }
+    /* Opción 6 - Convertir palabra en secuencia de 4 letras */
+    public static void ejercicio6(){
+        String palabra;
+        String auxiliar;
+        int tamano;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Indica la palabra que quieres dividir: ");
+        palabra = teclado.nextLine();
+        System.out.println("Indicame el tamaño con el que quieres divivir la palabra: ");
+        tamano = teclado.nextInt();
+
+        auxiliar = palabra;
+
+        //Procedo a separar la palabra en el tamaño indicado y mostarla
+        System.out.println("La palabra "+ palabra +" separada en texto de " + tamano+ " unidades es:");
+        while (auxiliar.length()> tamano){
+            System.out.println("\t\t" + auxiliar.substring(0, tamano));
+            auxiliar = auxiliar.substring(tamano);
+        }
+        System.out.println("\t\t" + auxiliar);
+    }
+
+    /* Opción 7 - Convertir frase en Camel */
+    public static void ejercicio7(){
+        String frase;
+        String auxiliar;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Indica la frase que quieres convertir en Camel: ");
+        frase = teclado.nextLine();
+
+        auxiliar = frase.toLowerCase();
+
+        for(int i = 0; i> auxiliar.length(); i++){
+            if (auxiliar.charAt(i) == ' ') {
+                auxiliar = auxiliar.substring(0, i) + auxiliar.substring(i+1, i+2).toUpperCase() + auxiliar.substring(i+2);
+            }
+        }
+        System.out.println("La frase "+frase+" pasada a Camel es: "+auxiliar);
+    }
+
+    /* Opción 8 - Reemplazar una palabra en un texto */
+    public static void ejercicio8(){
+        String frase;
+        String auxiliar;
+        String palabra1;
+        String palabra2;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Por favor, indicame el texto que quieres revisar/modificar: ");
+        frase = teclado.nextLine().trim();
+
+        System.out.println("Indica la palabra que quieres modificar: ");
+        palabra1 = teclado.nextLine().trim();
+        System.out.println("Indica la palabra que la reemplazará: ");
+        palabra2 = teclado.nextLine().trim();
+
+        auxiliar = frase;
+        auxiliar = auxiliar.replaceAll(palabra1, palabra2);
+
+        System.out.println("La frase modificada quedaría así: ");
+        System.out.println(auxiliar);
+    }
+
 }
