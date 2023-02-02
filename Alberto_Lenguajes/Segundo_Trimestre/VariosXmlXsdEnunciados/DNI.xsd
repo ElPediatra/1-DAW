@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="matricula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dni" type="DNI" />
+                            <xs:element name="nombre" type="Nombre" />
+                            <xs:element name="titulacion" type="Titulacion" />
+                            <xs:element name="curso_academico" type="xs:string" />
+                            <xs:element name="domicilios">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="domicilio" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string" />
+                                                </xs:sequence>
+                                                <xs:attribute name="tipo" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="pago">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tipo_matricula" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="DNI">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}[A-Z a-z]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Nombre">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z a-z]{20}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Titulacion">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z a-z]{40}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
