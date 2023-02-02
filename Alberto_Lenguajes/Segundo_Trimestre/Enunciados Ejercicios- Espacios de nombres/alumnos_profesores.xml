@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Alberto Gómez Morales - 1º DAW -->
+<!-- Enunciado dado una relación de asistentes formada por alumnos y profesores,
+y cada uno de ellos tiene nombre. Hay varios alumnos y varios profesores. Definir
+un nombre de espacio para cada uno de ellos alumnos_profesores.xml. Asociarle una definición XSD -->
+
+
+<asistentes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="alumnos_profesores.xsd" xmlns:P="profesores" xmlns:A="alumnos">
+    <P:profesores>
+        <P:profesor>
+            <P:nombre>Profesor 1</P:nombre>
+        </P:profesor>
+        <P:profesor>
+        <P:nombre>Profesor 2</P:nombre>
+        </P:profesor>
+    </P:profesores>
+
+    <A:alumnos>
+        <A:alumno>
+            <A:nombre>Alumno 1</A:nombre>
+        </A:alumno>
+        <A:alumno>
+            <A:nombre>Alumno 2</A:nombre>
+        </A:alumno>
+    </A:alumnos>
+</asistentes>

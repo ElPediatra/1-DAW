@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Alberto Gómez Morales - 1º DAW -->
+
+<!--EJERCICIO crear dos espacios de nombres uno para los elementos de una revista y otro para los elementos de html, con una tabla sencilla. La revista forma el raiz, tiene un title, y dentro de las celdas de la tabla va el autor, precio, paginas, fecha también de la revista.
+Revistas_Tablas.xml -->
+
+<revista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Revistas_Tablas.xsd" xmlns:R="Revista"xmlns:T="Tabla">
+  <R:titulo>Revista1</R:titulo>
+  <T:tabla>
+    <T:tr>
+      <T:td>
+        <R:autor>Autor1</R:autor>
+        <R:precio>10</R:precio>
+        <R:paginas>100</R:paginas>
+        <R:fecha>2022-01-01</R:fecha>
+      </T:td>
+      <T:td>
+        <R:autor>Autor2</R:autor>
+        <R:precio>20</R:precio>
+        <R:paginas>200</R:paginas>
+        <R:fecha>2022-02-02</R:fecha>
+      </T:td>
+    </T:tr>
+  </T:tabla>
+</revista>

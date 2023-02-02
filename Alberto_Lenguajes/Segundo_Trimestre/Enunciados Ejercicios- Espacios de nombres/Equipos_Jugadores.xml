@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Alberto Gómez Morales - 1º DAW -->
+<!-- Crear una XSD, Equipos_Jugadores.dtd  asociada a este fichero  con nombres de espacios,
+llamado Equipos_Jugadores.xml. -->
+
+<liga xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Equipos_Jugadores.xsd" xmlns:E="Equipo" xmlns:J="Jugador">
+    <E:equipo>
+        <E:nombre>equipo1</E:nombre>
+        <J:jugadores>
+            <J:nombre>jugador1</J:nombre>
+            <J:edad>20</J:edad>
+            <J:nacionalidad>española</J:nacionalidad>
+        </J:jugadores>
+    </E:equipo>
+    
+    <E:equipo>
+        <E:nombre>equipo2</E:nombre>
+        <J:jugadores>
+            <J:nombre>jugador2</J:nombre>
+            <J:edad>20</J:edad>
+            <J:nacionalidad>española</J:nacionalidad>
+        </J:jugadores>
+    </E:equipo>
+</liga>
