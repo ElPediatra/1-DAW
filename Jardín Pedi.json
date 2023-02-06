@@ -1,0 +1,532 @@
+{
+	"lightLevel": 1,
+	"houseSize": "Medium",
+	"interiorFixture": [
+		{
+			"level": "",
+			"type": "District",
+			"name": "Mist",
+			"itemId": 0,
+			"color": ""
+		},
+		{
+			"level": "Basement",
+			"type": "Floor",
+			"name": "Glade Flooring",
+			"itemId": 6459,
+			"color": ""
+		},
+		{
+			"level": "Ground Floor",
+			"type": "Light",
+			"name": "Crystal Chandelier",
+			"itemId": 16013,
+			"color": ""
+		},
+		{
+			"level": "Upper Floor",
+			"type": "Light",
+			"name": "Oasis Pendant Lamp",
+			"itemId": 6467,
+			"color": ""
+		},
+		{
+			"level": "Basement",
+			"type": "Light",
+			"name": "Crystal Chandelier",
+			"itemId": 16013,
+			"color": ""
+		},
+		{
+			"level": "Ground Floor",
+			"type": "Floor",
+			"name": "Glade Flooring",
+			"itemId": 6459,
+			"color": ""
+		},
+		{
+			"level": "Upper Floor",
+			"type": "Floor",
+			"name": "Glade Flooring",
+			"itemId": 6459,
+			"color": ""
+		},
+		{
+			"level": "Ground Floor",
+			"type": "Side Door",
+			"name": "Empty",
+			"itemId": 0,
+			"color": ""
+		},
+		{
+			"level": "Ground Floor",
+			"type": "Wall",
+			"name": "Storm Blue Interior Wall",
+			"itemId": 33248,
+			"color": ""
+		},
+		{
+			"level": "Upper Floor",
+			"type": "Wall",
+			"name": "Hingan Interior Wall",
+			"itemId": 20716,
+			"color": ""
+		},
+		{
+			"level": "Basement",
+			"type": "Wall",
+			"name": "Storm Blue Interior Wall",
+			"itemId": 33248,
+			"color": ""
+		}
+	],
+	"exteriorScale": 100,
+	"exteriorFixture": [
+		{
+			"level": "",
+			"type": "Exterior Wall",
+			"name": "Medium Cafe Walls",
+			"itemId": 35813,
+			"color": "AC5F5800"
+		},
+		{
+			"level": "",
+			"type": "Window",
+			"name": "Empty",
+			"itemId": 0,
+			"color": ""
+		},
+		{
+			"level": "",
+			"type": "",
+			"name": "",
+			"itemId": 0,
+			"color": ""
+		},
+		{
+			"level": "",
+			"type": "",
+			"name": "",
+			"itemId": 0,
+			"color": ""
+		}
+	],
+	"exteriorFurniture": [
+		{
+			"itemId": 7999,
+			"name": "Curved Stepping Stones",
+			"transform":
+			{
+				"location": [ 933.50090421961056, 885.1035319447376, 0 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 13087,
+			"name": "Ultimate Kettle Nexus",
+			"transform":
+			{
+				"location": [ -846, 268.36523056030273, 0 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 30396,
+			"name": "Red Brick Kitchen",
+			"transform":
+			{
+				"location": [ -1451.7456492814904, 1340.3130183065284, 0 ],
+				"rotation": [ -0, 0, -0.70710678118654757, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 35582,
+			"name": "Il Mheg Garden Fountain",
+			"transform":
+			{
+				"location": [ 0, 972, 0 ],
+				"rotation": [ 0, -0, 0.25881904510252091, 0.96592582628906842 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32249,
+			"name": "Brick Paving",
+			"transform":
+			{
+				"location": [ 0, 1357, 0.010781489312648773 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "E4DFD0FF"
+			}
+		},
+		{
+			"itemId": 7999,
+			"name": "Curved Stepping Stones",
+			"transform":
+			{
+				"location": [ -791.90783499492341, 937.32974475922299, 0 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32250,
+			"name": "La Noscean Grape Pergola",
+			"transform":
+			{
+				"location": [ 1799.1451809914251, 993.70363998998891, 185.65445225086097 ],
+				"rotation": [ 0, -0, 0.99999999999999989, 6.123233995736766e-17 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "3F3329FF",
+				"designName": "Balcony",
+				"scale": 100
+			},
+			"attachments": [
+				{
+					"itemId": 15160,
+					"name": "Oriental Wood Bridge",
+					"transform":
+					{
+						"location": [ 1565.863394102448, 864.08135153744581, 1.4449426631676923 ],
+						"rotation": [ 0, 0, 0.70710678118654757, 0.70710678118654735 ],
+						"scale": [ 1, 1, 1 ]
+					},
+					"properties":
+					{
+						"color": "E4DFD0FF"
+					}
+				},
+				{
+					"itemId": 7993,
+					"name": "Lattice Planter",
+					"transform":
+					{
+						"location": [ 1545.7134255804867, 654.48208928553674, 1.454920327348598 ],
+						"rotation": [ 0, 0, 0.70710678118654757, 0.70710678118654735 ],
+						"scale": [ 1, 1, 1 ]
+					},
+					"properties":
+					{
+						"color": "E4DFD0FF"
+					}
+				},
+				{
+					"itemId": 28642,
+					"name": "Wooden Deck",
+					"transform":
+					{
+						"location": [ 1752.5853370421305, 854.07952638746565, 161.45492032734859 ],
+						"rotation": [ 0, 0, 0.70710678118654757, 0.70710678118654735 ],
+						"scale": [ 1, 1, 1 ]
+					},
+					"properties":
+					{
+						"color": "E4DFD0FF"
+					}
+				},
+				{
+					"itemId": 32250,
+					"name": "La Noscean Grape Pergola",
+					"transform":
+					{
+						"location": [ 1799.1239210444865, 713.7050669011652, 185.65297940937984 ],
+						"rotation": [ 0, 0, 0.70710678118654757, 0.70710678118654735 ],
+						"scale": [ 1, 1, 1 ]
+					},
+					"properties":
+					{
+						"color": "E4DFD0FF"
+					}
+				},
+				{
+					"itemId": 7993,
+					"name": "Lattice Planter",
+					"transform":
+					{
+						"location": [ 1545.7203146778447, 1054.4591521984187, 1.4549203273485924 ],
+						"rotation": [ 0, 0, 0.70710678118654757, 0.70710678118654735 ],
+						"scale": [ 1, 1, 1 ]
+					},
+					"properties":
+					{
+						"color": "E4DFD0FF"
+					}
+				}
+			]
+		},
+		{
+			"itemId": 6475,
+			"name": "Moogle Letter Box",
+			"transform":
+			{
+				"location": [ -170.64622697967559, 1492.5422612696366, 0 ],
+				"rotation": [ 0, -0, 0.93969262078590832, 0.34202014332566888 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 7999,
+			"name": "Curved Stepping Stones",
+			"transform":
+			{
+				"location": [ -1114.7000593826979, 1314.5611828203171, -0.0077028427801994906 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 39419,
+			"name": "Low Garden Hedge",
+			"transform":
+			{
+				"location": [ -250, 1361.6094055175781, 0 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32250,
+			"name": "La Noscean Grape Pergola",
+			"transform":
+			{
+				"location": [ -1386.2394256037935, 1388.2649568834138, 0.0023117306052443461 ],
+				"rotation": [ -0, 0, -0.70710678118654757, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32249,
+			"name": "Brick Paving",
+			"transform":
+			{
+				"location": [ 0, 556, -0.0075809755362570286 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "E4DFD0FF"
+			}
+		},
+		{
+			"itemId": 28642,
+			"name": "Wooden Deck",
+			"transform":
+			{
+				"location": [ 607.13122210550762, 1330.2121387950256, 0 ],
+				"rotation": [ 0, -0, 0.99999999999999989, 6.123233995736766e-17 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "3F3329FF"
+			}
+		},
+		{
+			"itemId": 9746,
+			"name": "Riviera Garden Table Set",
+			"transform":
+			{
+				"location": [ -1176.7487782405847, 945.15330106049487, 0.0028548486072310516 ],
+				"rotation": [ 0, -0, 0.16556549031860884, 0.98619879761413132 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "3F3329FF"
+			}
+		},
+		{
+			"itemId": 7998,
+			"name": "Straight Stepping Stones",
+			"transform":
+			{
+				"location": [ -355.08007227337782, 908.7219668656702, 0.0063820939697545528 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32250,
+			"name": "La Noscean Grape Pergola",
+			"transform":
+			{
+				"location": [ 443.88499061682535, 1388.2649568834138, 0.0023117306052443465 ],
+				"rotation": [ -0, 0, -0.70710678118654757, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 35806,
+			"name": "Sharlayan Lamppost",
+			"transform":
+			{
+				"location": [ 0, 0, 0 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 39419,
+			"name": "Low Garden Hedge",
+			"transform":
+			{
+				"location": [ 250, 1355.6094055175781, 0 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 7130,
+			"name": "Deluxe Garden Patch",
+			"transform":
+			{
+				"location": [ -1389.5677184646447, -1222.5971862776871, -0.0042246637398834852 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 7130,
+			"name": "Deluxe Garden Patch",
+			"transform":
+			{
+				"location": [ -1385.5509855883301, -576.45880297566805, 0.56166414869963432 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 9746,
+			"name": "Riviera Garden Table Set",
+			"transform":
+			{
+				"location": [ -551.91632495138845, 1289.7028877659873, 0 ],
+				"rotation": [ 0, -0, 0.16556549031860879, 0.98619879761413132 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "3F3329FF"
+			}
+		},
+		{
+			"itemId": 7998,
+			"name": "Straight Stepping Stones",
+			"transform":
+			{
+				"location": [ 486.57629154349786, 872.4539744571407, 0 ],
+				"rotation": [ 0, -0, 0.70710678118654746, 0.70710678118654768 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 32249,
+			"name": "Brick Paving",
+			"transform":
+			{
+				"location": [ 0, 957.00506591796875, -0.0029196371324360371 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+				"color": "E4DFD0FF"
+			}
+		},
+		{
+			"itemId": 6600,
+			"name": "Miniature Aetheryte",
+			"transform":
+			{
+				"location": [ 43.421698929766421, 149.72229156674922, 0.0031215551035125785 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		},
+		{
+			"itemId": 37401,
+			"name": "Garden Gate",
+			"transform":
+			{
+				"location": [ 7, 1587, 0 ],
+				"rotation": [ 0, 0, 0, 1 ],
+				"scale": [ 1, 1, 1 ]
+			},
+			"properties":
+			{
+			}
+		}
+	],
+	"metaData":
+	{
+		"version": 110
+	},
+	"interiorScale": 100,
+	"interiorFurniture": [],
+	"properties":
+	{
+		"entranceLayout": "Center"
+	}
+}
