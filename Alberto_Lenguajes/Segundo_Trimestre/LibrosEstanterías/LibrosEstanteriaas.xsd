@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="lista_libros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="libro" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string" />
+                            <xs:element name="autor" type="xs:string" />
+                            <xs:element name="publicacion" type="Fpublicacion" />
+                            <xs:element name="edicion" type="Fedicion" />
+                            <xs:element name="estanteria" type="Cestanteria" />
+                            <xs:element name="fila" type="Cfila" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="Fpublicacion">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1600" />
+            <xs:maxInclusive value="1999" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Fedicion">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1869" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Cestanteria">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="Cfila">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
