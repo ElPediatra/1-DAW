@@ -1,0 +1,110 @@
+    Examen Tema 5 - Comandos Ubuntu
+    
+    1. Crear la siguiente estructura de directorios en tu carpeta de usuario:
+       examen/
+       examen/parte1
+       examen/parte1/ejercicios
+       examen/parte1/teoria
+       examen/parte2
+       examen/parte3
+       examen/parte3/conclusion
+       Nota: Demuestra que todo la estructura ha salido bien.
+       
+       (Terminal <------- tree)
+
+    2. ¿Qué permisos se asignan por defecto a un directorio cuando es creado?
+    
+    Se crea con permisos completos para sudo, ulsuario y solo de lectura y ejecucion para terceros.
+
+    3. Da permisos totales a las carpetas creadas
+    
+    (Terminal <------- ls -n + tree)
+    
+    4. Posicionarse en el directorio ~/examen/parte1/ejercicios
+    
+    (Terminal <------- ls -n + tree)
+    
+    5. Copiar el fichero /etc/services al directorio actual con el nombre servicios.
+    
+    (Terminal <------- ls -n + tree)
+    
+    6. Mover el fichero servicios al directorio ~/examen/parte2 sin moverse del directorio actual.
+
+    (Terminal <------- ls -n + tree)
+    
+    7. Borrar el directorio ~/examen/parte3 y todo lo que hay dentro sin moverse del directorio actual.
+    
+    (Terminal <------- ls -n + tree)
+    
+    8. Crear el fichero musica.txt con este contenido:
+	Stairway to Heaven#Led Zeppelin#Jimmy Page&Robert Plant#08/11/1971#8:02
+	Yesterday#The Beatles#Lennon&McCartney#06/08/1965#2:03
+	Like a Rolling Stone#Bob Dylan#Bob Dylan#20/07/1965#6:09
+	Born to Run#Bruce Springsteen#Bruce Springsteen#25/08/1975#4:30
+	Light My Fire#The Doors#Robby Krieger#01/01/1965#7:08
+	Hey Jude#The Beatles#Lennon&McCartney#26/08/1968#7:11
+	Imagine#John Lennon#John Lennon#11/10/1975#3:01
+
+    9. ¿Qué permisos se asignan por defecto a un fichero regular como el anterior cuando es creado? Modifica temporalmente estos permisos a 644 para los ficheros creados y 744 para los directorios.
+    
+    Se aplican permisos 664
+    (Terminal <------- ls -n + tree)
+    
+    10. Crea un fichero llamados musica2.txt y muestra los permisos de los ficheros regulares y los ocultos del directorio.
+    
+    (Terminal <------- ls -n + tree)
+    
+    
+    11. Añadir permisos de escritura para el grupo al fichero creado anteriormente, manteniendo los que tenía para el  propietario y otros.
+    
+    (Terminal <------- ls -n + tree)
+    
+    12. Cuenta el número de canciones en las que aparezca Lennon.
+    
+    Aparece 3 veces
+    (Terminal <------- grep -e "Lennon" musica.txt)
+    
+    
+    13. Ordena por duración el nombre de las canciones (muestra el nombre de la canción y la duración).
+    
+    NO REALIZADO
+    
+    14. Muestra las 3 últimas líneas del fichero.
+    
+    NO REALIZADO
+    
+    15. Generar el fichero ~/examen/parte2/listado a partir del contenido de la carpeta /usr/bin
+    
+    NO REALIZADO
+    
+    16. Crear el enlace simbólico ~/examen/enlacealistado que apunte al fichero ~/examen/parte2/listado
+    
+    (Terminal <------- ln -s + tree)
+    
+    17. Buscar en home los archivos que comiencen por vo y copiarlos en la carpeta actual.
+    
+    NO REALIZADO
+    
+    18. Repite lo anterior pero de forma que los errores en la búsqueda no se muestren por pantalla. El fichero con los errores debe llamarse errores.txt . Muestra después el contenido de errores.txt.
+    
+    NO REALIZADO
+    
+    19. Buscar dentro de los ficheros de la carpeta ~/examen aquellos  que contengan el texto “man”.
+    
+    NO REALIZADO
+    
+    20. Localizar dentro de la carpeta ~/examen aquellos ficheros que la primera letra sea una m, y el resto cualquier cosa.
+    
+    NO REALIZADO
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
