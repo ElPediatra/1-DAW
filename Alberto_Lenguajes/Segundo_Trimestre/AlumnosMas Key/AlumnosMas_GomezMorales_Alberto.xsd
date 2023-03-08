@@ -1,0 +1,68 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumnos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cursos" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:int">
+                    <xs:minInclusive value="1"/>
+                    <xs:maxInclusive value="9"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="curso" type="xs:string"/>
+            </xs:sequence>
+            <xs:key name="pk_curso">
+              <xs:selector xpath="."/>
+              <xs:field xpath="curso"/>
+            </xs:key>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="alumno" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="curso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="B2"/>
+                    <xs:enumeration value="B3"/>
+                    <xs:enumeration value="C1"/>
+                    <xs:enumeration value="C2"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dni">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d{8}[A-Z]"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="numero_de_matricula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:int">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="1000"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="delegado" type="xs:boolean"/>
+            </xs:sequence>
+            <xs:key name="pk_alumno">
+              <xs:selector xpath="."/>
+              <xs:field xpath="dni"/>
+            </xs:key>
+            <xs:keyref name="fk_alumno_curso" refer="pk_curso">
+              <xs:selector xpath="."/>
+              <xs:field xpath="curso"/>
+            </xs:keyref>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crear el fichero .xsd con las claves primarias y claves ajenas sabiendo que los alumnos realizan los cursos 
+y en un curso puede haber más de un alumno. Insertar en el fichero .xml los campos para dichas claves si es necesario. 
+* Restricción en el curso
+* Restriccion de las aulas conociendo que se enumeran del 1 al 9
+* Restricción del DNi
+* Restriccion de la matricula que tiene un máximo de 1000 y no es negativo
+-->
+
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="AlumnosMas_GomezMorales_Alberto.xsd" version="1.0">
+    <cursos> 
+        <aula>2</aula>  
+        <curso>B2</curso>
+    </cursos>
+    <cursos> 
+        <aula>3</aula>  
+        <curso>B3</curso>
+    </cursos>
+    <cursos> 
+        <aula>1</aula>  
+        <curso>C1</curso>
+    </cursos>
+    <cursos> 
+        <aula>5</aula>  
+        <curso>C2</curso>
+    </cursos>
+    <alumno id="1">
+        <curso>B3</curso>
+        <dni>12345678M</dni>
+        <nombre>Maria</nombre>
+        <numero_de_matricula>100</numero_de_matricula>
+        <delegado>Falso</delegado>  
+    </alumno>
+    <alumno id="2">
+        <curso>B2</curso>
+        <dni>44555666V</dni>
+        <nombre>Juan</nombre>
+        <numero_de_matricula>606</numero_de_matricula>
+        <delegado>Verdadero</delegado>  
+    </alumno>
+    <alumno id="3">
+        <curso>B3</curso>
+        <dni>56798765R</dni>
+        <nombre>Antonio</nombre>
+        <numero_de_matricula>111</numero_de_matricula>
+        <delegado>Falso</delegado>  
+    </alumno>
+    <alumno id="4">
+        <curso>C1</curso>
+        <dni>98765400R</dni>
+        <nombre>Juan</nombre>
+        <numero_de_matricula>222</numero_de_matricula>
+        <delegado>Verdadero</delegado>  
+    </alumno>
+    <alumno id="5">
+        <curso>C1</curso>
+        <dni>55443300T</dni>
+        <nombre>Marta</nombre>
+        <numero_de_matricula>120</numero_de_matricula>
+        <delegado>Falso</delegado>  
+    </alumno>
+</alumnos>
