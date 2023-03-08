@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="TipoColoresSemaforo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rojo"/>
+      <xs:enumeration value="Amarillo"/>
+      <xs:enumeration value="Verde"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Tipo3ColoresSemaforo">
+    <xs:list itemType="TipoColoresSemaforo">
+      <xs:length value="3"/>
+    </xs:list>
+  </xs:simpleType>
+
+  <xs:element name="semaforo" type="Tipo3ColoresSemaforo"/>
+
+</xs:schema>

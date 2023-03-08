@@ -1,0 +1,21 @@
+<!--
+    Dado un Tipo simple, TipoColoresSemaforo, basado en
+    xs:string y que sólo pueda tomar los valores Rojo,
+    Amarillo y Verde, define un nuevo tipo ListaColoresSemaforo
+    que sea una lista cuyos elementos sean del tipo
+    TipoColoresSemaforo. Por último, crea otro tipo
+    que sea una lista de sólo tres colores de semáforo,
+    Tipo3ColoresSemaforo.
+
+    Crea un esquema que contenga estos tipos y declarar un
+    elemento del tipo recién construido Tipo3ColoresSemaforo.
+
+    Crea un documento XML instancia del esquema, que contenga
+    un único elemento de ese tipo. Comprueba que es válido
+    respecto al esquema.
+-->
+
+<semaforo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Ejercicios_4.8_Editorial_Garceta_GomezMorales_Alberto.xsd">
+  Rojo Amarillo Verde
+</semaforo>
