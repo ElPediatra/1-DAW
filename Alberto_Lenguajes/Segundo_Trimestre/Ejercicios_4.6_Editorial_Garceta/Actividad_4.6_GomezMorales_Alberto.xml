@@ -1,0 +1,7 @@
+<ejemplo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Actividad_4.6_GomezMorales_Alberto.xsd">
+    <temperatura>22.500</temperatura>
+    <pais>ES</pais>
+    <salario>3000.50</salario>
+    <tweet>Este es un ejemplo de un tweet con 140 caracteres.</tweet>
+  </ejemplo>

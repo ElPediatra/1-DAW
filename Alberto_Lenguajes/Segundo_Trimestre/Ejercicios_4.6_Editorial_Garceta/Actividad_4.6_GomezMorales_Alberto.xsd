@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Definición del tipo de dato para la temperatura -->
+  <xs:simpleType name="temperatura">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-75.000"/>
+      <xs:maxInclusive value="75.000"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Definición del tipo de dato para el país -->
+  <xs:simpleType name="pais">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ES"/>
+      <xs:enumeration value="PR"/>
+      <xs:enumeration value="FR"/>
+      <xs:enumeration value="AN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Definición del tipo de dato para el salario -->
+  <xs:simpleType name="salario">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="7"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Definición del tipo de dato para el tweet -->
+  <xs:simpleType name="tweet">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="140"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Definición del elemento que utiliza los tipos simples -->
+  <xs:element name="ejemplo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="temperatura" type="temperatura"/>
+        <xs:element name="pais" type="pais"/>
+        <xs:element name="salario" type="salario"/>
+        <xs:element name="tweet" type="tweet"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
