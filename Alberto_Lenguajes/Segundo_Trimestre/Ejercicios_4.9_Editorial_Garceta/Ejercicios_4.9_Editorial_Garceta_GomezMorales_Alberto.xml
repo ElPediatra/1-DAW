@@ -1,0 +1,10 @@
+<!--
+    Define un tipo de datos que valide el siguiente fragmento de un documento instancia XML:
+    
+    <temperatura escala="Celsius">37</temperatura>
+
+    El tipo de datos del elemento <temperatura> es xs:integer, y el del atributo escala, uno derivado de xs:string que sólamente permita los valores Celsius, Kelvin o Farenheit.
+-->
+
+<temperatura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Ejercicios_4.9_Editorial_Garceta_GomezMorales_Alberto.xsd" escala="Celsius">37</temperatura>
