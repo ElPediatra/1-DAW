@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crear una restriccion para utilizar la union en xsd, de forma que en el elemento <pais> 
+pueda contener tanto el nombre del pais como su código
+Poner en la restriccion 4 paises y 4 códigos-->
+
+<paises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="PaisesUnion_GomezMorales_Alberto.xsd">
+ <direccion>
+    <calle> Avda Los Castros</calle>
+    <ciudad>Santander</ciudad>
+    <codigo-postal>39005</codigo-postal>
+    <region>Cantabria</region>
+    <pais>España</pais>
+  </direccion>
+
+  <direccion>
+    <calle> Los Larios</calle>
+    <ciudad>Malaga</ciudad>
+    <codigo-postal>29005</codigo-postal>
+    <region>Andalucia</region>
+    <pais>+34</pais>
+  </direccion>
+
+  <direccion>
+    <calle> Le Etage</calle>
+    <ciudad>Paris</ciudad>
+    <codigo-postal>00046</codigo-postal>
+    <region>Centro</region>
+    <pais>Francia</pais>
+  </direccion>
+
+  <direccion>
+    <calle> La herreria</calle>
+    <ciudad>Paris</ciudad>
+    <codigo-postal>00046</codigo-postal>
+    <region>Norte</region>
+    <pais>+33</pais>
+  </direccion>
+
+  <direccion>
+    <calle> Avda del Pilar</calle>
+    <ciudad>Zaragoza</ciudad>
+    <codigo-postal>52005</codigo-postal>
+    <region>Aragon</region>
+    <pais>España</pais>
+  </direccion>
+
+  <direccion>
+    <calle> Alba De Tormes</calle>
+    <ciudad>Avila</ciudad>
+    <codigo-postal>05005</codigo-postal>
+    <region>CastillaLeon</region>
+    <pais>+34</pais>
+  </direccion>
+</paises>

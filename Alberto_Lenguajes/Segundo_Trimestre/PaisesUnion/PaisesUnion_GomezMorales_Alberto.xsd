@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="CodigoPais">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+?[0-9]{2,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NombrePais">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="España"/>
+      <xs:enumeration value="Francia"/>
+      <xs:enumeration value="Alemania"/>
+      <xs:enumeration value="Italia"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Pais">
+    <xs:union memberTypes="NombrePais CodigoPais"/>
+  </xs:simpleType>
+
+  <xs:element name="direccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="calle" type="xs:string"/>
+        <xs:element name="ciudad" type="xs:string"/>
+        <xs:element name="codigo-postal" type="xs:string"/>
+        <xs:element name="region" type="xs:string"/>
+        <xs:element name="pais" type="Pais"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="paises">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="direccion" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
