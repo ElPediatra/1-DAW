@@ -1,0 +1,28 @@
+<!--
+    Define diferentes tipos simples a partir de las siguientes
+    especificaciones.
+
+    a. Una cadena de texto que respresente las matrículas
+    españolas anteriores a la normalización del año 2000.
+    El formato era: una o dos letras mayúsculas + un guión
+    + cuatro digitos + un guión + una o dos letras mayúsculas.
+    (ej. Z-1234-AB)
+
+    b. Una cadena de texto que represente las cuatro posibles
+    formas de pago: con tarjeta VISA, MasterCard, Americas
+    Express y en Efectivo.
+
+    A continuación, crea un esquema en el que sólo haya un
+    elemento al que se le asigne un tipo simple de los
+    definidos.
+
+    Por último, escribe un documento instancia XML que sea
+    válido con respecto a ese esquema. Repítelo para los
+    distintos tipos definidos.
+-->
+
+<compra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Actividad_4.7_GomezMorales_Alberto.xsd">
+    <matricula>Z-1234-AB</matricula>
+    <forma_pago>Tarjeta VISA</forma_pago>
+</compra>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="tipo_matricula">
+        <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{1,2}-\d{4}-[A-Z]{1,2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipo_forma_pago">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Tarjeta VISA"/>
+            <xs:enumeration value="MasterCard"/>
+            <xs:enumeration value="American Express"/>
+            <xs:enumeration value="Efectivo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="compra">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="matricula" type="tipo_matricula"/>
+                <xs:element name="forma_pago" type="tipo_forma_pago"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
