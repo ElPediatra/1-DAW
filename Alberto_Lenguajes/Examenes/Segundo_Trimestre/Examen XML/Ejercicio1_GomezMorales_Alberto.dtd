@@ -1,0 +1,16 @@
+
+<!-- Pedido debe tener un cliente y producto-->
+<!ELEMENT pedido (cliente, productos)>
+
+<!-- Cliente debe tener el nombre del cliente y su dirección-->
+<!ELEMENT cliente (nombre, direccion)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+
+<!-- El pedido/producto puede tener varios productos con su nombre, precio y cantidad, pongo que sean necesarios ya que no tiene sentido un pedido vacío-->
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto EMPTY>
+<!ATTLIST producto
+          nombre CDATA #REQUIRED
+          precio CDATA #REQUIRED
+          cantidad CDATA #REQUIRED>

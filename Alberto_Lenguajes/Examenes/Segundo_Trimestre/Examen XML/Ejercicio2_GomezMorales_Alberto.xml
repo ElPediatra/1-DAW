@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Alberto Gómez Morales - 1º DAW - Lenguajes de Marcas y Sistemas de Gestión de Información
+
+    Ejercicio 2.- Utiliza un XML Schema para comprobar que un documento XML es válido dada la
+    siguiente estructura: un elemento principal representando una serie que contenga un título,
+    una fecha de estreno, un número de temporadas representado por un valor entero con un valor
+    mínimo de 1 y máximo de 50 y un género que elegir entre “comedia”, “drama” y
+    “ciencia ficción”.
+-->
+
+<serie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio2_GomezMorales_Alberto.xsd">
+  <titulo>Los Simpsons</titulo>
+  <fecha>1995-01-01</fecha>
+  <temporadas>21</temporadas>
+  <genero>comedia</genero>
+</serie>

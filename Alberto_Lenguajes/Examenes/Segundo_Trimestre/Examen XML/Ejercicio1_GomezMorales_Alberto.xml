@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Alberto Gómez Morales - 1º DAW - Lenguajes de Marcas y Sistemas de Gestión de Información
+
+    Ejercicio 1.- Crea un documento XML que represente un pedido de una hamburguesería. La
+    información contenida es: nombre del cliente, una lista de productos que incluya el
+    nombre y el precio. Por cada producto, incluye un atributo que contenga el número de
+    productos. Realiza un DTD externo que valide el formato del documento XML.
+-->
+
+<!-- Asociación al archivo DTD -->
+<!DOCTYPE pedido SYSTEM "Ejercicio1_GomezMorales_Alberto.dtd">
+
+<!-- Sección general del pedido -->
+<pedido>
+  <!-- Información del cliente -->
+  <cliente>
+    <nombre>Marvin y Nemo</nombre>
+    <direccion>Calle Wallaby 46, Sidney</direccion>
+  </cliente>
+
+  <!-- Información de los productos -->
+  <productos>
+    <producto nombre="Hamburguesa de pollo" precio="2" cantidad="2"/>
+    <producto nombre="Hamburguesa vegana" precio="4" cantidad="1"/>
+    <producto nombre="Patatas fritas grandes" precio="3,50" cantidad="2"/>
+    <producto nombre="Patatas fritas pequeñas" precio="1,20" cantidad="1"/>
+    <producto nombre="Cubo de nuggets" precio="8,20" cantidad="1"/>
+    <producto nombre="Cerveza" precio="5" cantidad="2"/>
+    <producto nombre="Refresco pequeño" precio="1,50" cantidad="1"/>
+  </productos>
+</pedido>
