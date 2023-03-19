@@ -1,0 +1,7 @@
+Nodos = Circulos
+Aristas = Flechas
+Nodos predicado = 2 o más caminos en los que se separen
+Regiones = Areas que estén cerradas por nodos y aristas (+1 que es la de fuera)
+
+Casos de prueba:
+Ejemplo página 11 teoría
