@@ -1,9 +1,18 @@
-(I)     public static int factorial(int n) {
-(1)             int resultado;
-
-(2)             resultado = 1;
-(3),(4) y (5)   for (int i = 2; i <= n; i++) {
-(6)                 resultado = resultado * i;
-                }
-(7)             return resultado;
-(F)     }
+public boolean esPrimo(int n) {
+    boolean primo;
+    
+    if (n <= 1) {
+         primo = false;
+    } else {
+        primo = true;
+        int i = 2;
+        while (primo && i <= n / 2) {
+            if (divisible(n,i)) {
+                primo = false;
+            } else {
+                i++;
+            }
+        }
+    }
+    return primo;
+}
