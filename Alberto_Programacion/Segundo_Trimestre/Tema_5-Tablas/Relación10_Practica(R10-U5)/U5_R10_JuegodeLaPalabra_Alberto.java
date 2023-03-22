@@ -48,15 +48,22 @@ public class U5_R10_JuegodeLaPalabra_Alberto {
          longitudPalabra = palabraSecreta.length();
           
          //Desarrollamos el programa
-         System.out.println("*************************************************************************************");
-         System.out.println("*************** Bienvenido al juego de la palabra (Wordle) **************************");
-         System.out.println("*************************************************************************************");
+         System.out.println(YELLOW + "*************************************************************************************" + RESET);
+         System.out.println(YELLOW + "*************** "+RESET+BLUE+"Bienvenido al juego de la palabra (Wordle)"+RESET+YELLOW+" **************************" + RESET);
+         System.out.println(YELLOW + "*************************************************************************************" + RESET);
+         System.out.println("");
 
          /* Muestro el tamaño de la palabra con "_" y lo indíco*/
          letrasAdivinadas = new char[longitudPalabra];
          for (int i = 0; i < longitudPalabra; i++) {
              letrasAdivinadas[i] = '_';
          }
+
+         System.out.println("Dispones de 5 intentos para acetar la palabra, el programa te indicará si has acertado o no cada letra.");
+         System.out.println("\tMarcará en "+RED+"ROJO "+RESET+"si la letra no es correcta.");
+         System.out.println("\tMarcará en "+YELLOW+"AMARILLO "+RESET+"si está en la palabra pero no en su sitio");
+         System.out.println("\tMarcará en "+GREEN+"VERDE "+RESET+"si está en su posición correcta.");
+         System.out.println("");
 
          System.out.println("\tLa palabra tiene " + longitudPalabra + " letras: " + String.valueOf(letrasAdivinadas));
          System.out.println("");
@@ -90,6 +97,7 @@ public class U5_R10_JuegodeLaPalabra_Alberto {
              System.out.println();
              System.out.println(String.valueOf(letrasAdivinadas)); //Cambio la letra adivinada en el '_' de la posición correspondiente
              intentos--; // Resto un intento
+             System.out.println("Te quedan "+RED+intentos+RESET+" intentos.");
          }
 
             /* Si el usuario no acierta la palabra en 5 intentos, mostrar la palabra secreta */
