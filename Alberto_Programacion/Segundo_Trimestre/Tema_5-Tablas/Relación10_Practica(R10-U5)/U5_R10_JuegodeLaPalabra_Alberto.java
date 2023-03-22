@@ -39,13 +39,14 @@ public class U5_R10_JuegodeLaPalabra_Alberto {
          char[] letrasUsuario;
          char letraUsuario;
          char letraSecreta;
-         int intentos = 5;
+         int intentos;
 
  
          /* Uso Random para seleccionar una palabra y su longitud */
          indicePalabra = random.nextInt(palabras.length);
          palabraSecreta = palabras[indicePalabra];
          longitudPalabra = palabraSecreta.length();
+         intentos = longitudPalabra; /* Asigno el número de intentos al tamaño de la palabra */
           
          //Desarrollamos el programa
          System.out.println(YELLOW + "*************************************************************************************" + RESET);
@@ -59,7 +60,7 @@ public class U5_R10_JuegodeLaPalabra_Alberto {
              letrasAdivinadas[i] = '_';
          }
 
-         System.out.println("Dispones de 5 intentos para acetar la palabra, el programa te indicará si has acertado o no cada letra.");
+         System.out.println("Dispones de "+intentos+" intentos para acetar la palabra, el programa te indicará si has acertado o no cada letra.");
          System.out.println("\tMarcará en "+RED+"ROJO "+RESET+"si la letra no es correcta.");
          System.out.println("\tMarcará en "+YELLOW+"AMARILLO "+RESET+"si está en la palabra pero no en su sitio");
          System.out.println("\tMarcará en "+GREEN+"VERDE "+RESET+"si está en su posición correcta.");
