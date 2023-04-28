@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book category="COOKING">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  <book category="NOVELA">
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+  <book category="WEB">
+    <title lang="en">XQuery Kick Start</title>
+    <author>James McGovern</author>
+    <author>Per Bothner</author>
+    <author>Kurt Cagle</author>
+    <author>James Linn</author>
+    <author>Vaidyanathan Nagarajan</author>
+    <year>2003</year>
+    <price>49.99</price>
+  </book>
+  <book category="WEB">
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+  <book category="NOVELA">
+    <title lang="es">El señor de los anillos, La comunidad del anillo</title>
+    <author>J.R.R. Tolkien</author>
+    <year>1954</year>
+    <price>19.00</price>
+  </book>
+  <book category="CINE">
+    <title lang="es">El Guion</title>
+    <author>Robert McKee</author>
+    <year>1997</year>
+    <price>19.95</price>
+  </book>
+  <book category="CINE">
+    <title lang="es">Meditaciones de cine</title>
+    <author>Quentin Tarantino</author>
+    <year>2023</year>
+    <price>39.95</price>
+  </book>
+  <book category="NOVELA">
+    <title lang="es">El Quijote</title>
+    <author>Miguel de Cervantes</author>
+    <year>1605</year>
+    <price>11.90</price>
+  </book>
+  <book category="NOVELA">
+    <title lang="es">La Reina oculta</title>
+    <author>Jorge Molist</author>
+    <year>2007</year>
+    <price>19.95</price>
+  </book>
+</bookstore>
+
+<!-- Preguntas del examen y respuestas:
+
+1. Muestra los nodos book de los libros cuyo título contenga la cadena "Harry"
+
+for $book in //book[contains(title, "Harry")]
+return $book
+
+2. Mostrar los títulos y el autor de los libros publicados en el año 2005, entre etiquetas <libro2005>
+
+for $book in //book[year = 2005]
+return <libro2005> {concat($book/title, ' por ', $book/author)}
+</libro2005>
+
+3. Mostrar los libros (nodos book) cuya categoría sea "WEB" y ordenados por título. En XQuery.
+
+for $book in //book[@category = 'WEB']
+order by $book/title
+return $book
+
+4. Mostrar todos los títulos de los libros (sin etiquetas) junto al número de orden en el xml, ej:
+
+1. Los pilares de la tierra
+
+2. Harry Potter
+
+3. El guión
+
+for $i in 1 to count(//book)
+let $title := //book[$i]/title
+return concat($i, '. ', $title, ' ')
+
+5. Mostrar los títulos de los libros y al final el número total de libros entre las etiquetas <total>
+
+let $total := count (/bookstore/book),
+    $titulos := (
+      for $libro in /bookstore/book/title 
+      return <titulo>{$libro/text()}</titulo>) 
+return 
+      <resultado>
+        {$titulos}
+        <total>{$total}</total>
+      </resultado>
+-->
