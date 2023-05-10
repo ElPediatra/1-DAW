@@ -1,0 +1,47 @@
+Crea la clase Animales, que tenga una composición con la clase Sexo
+	- Sexo: Clase enumerada solo para Sexo (Macho,Hembra,Hermafrodita).
+
+La clase Animales tiene que tener los atributos sexo y contadorAnimales (para saber cuántos animales se han registrado). Tiene que tener:
+	- Constructor Animales (por defecto Macho)
+	- get y setter (getSexo / getgetCantidadAnimales)
+	- toString
+	- dormir ("zZzZzZz")
+
+La clase Mamiferos heredando de Animales. Tiene que tener:
+	- Constructor por defecto crea un animal Macho y de Tierra
+	- método nadar() //Averigua si es acuático o no
+	- método correr() //Averisua si correo o no corre
+	- método dormir() //super. de Animales
+	- método comer(String comida) // Recibe el tipo de comida que va a comer. Si es acuatico y come algas le encanta, si no, no le gusta
+
+La clase Gatos heredando de Mamiferos. Tiene que tener:
+	- Constructor con raza (defecto siames), sexo(por defecto hembra) y tipo(super amiferos)
+	- método toString(muestra los datos del gato - Puede usarlo Animales y Mamífero)
+	- método maullar(sonido meow meow)
+	- método ronronear(purrr purrr)
+	- método comida(string, si no es pescado no les gusta)
+	- método peleaCon(contrincante - solo pelean los Machos)
+
+La clase PruebaAnimales (Principal/main). Tiene que tener:
+	- Varios gatos creados.
+	- Interactuar con los métodos creados usando diferentes gatos.
+
+La clase Perros
+	- Constructor con raza, sexo y tipo
+	- método toString(muestra los datos del perro - Puede usarlo Anilames y Mamífero)
+	- método aullar(sonido auuuu)
+	- método ladrar(sonido bark bark)
+	- método comida(string, si no son sobras no les gusta)
+	- método juegaCon(jugon - solo juegan si son Hembras)
+
+
+------ Modificaciones para ArrayList ------
+La clase PruebaAnimales
+	- Crear ArrayList de nombres de perros/gatos
+
+La clase Perros
+	- Crear un ArrayList de Perros
+
+La clase Main
+	- Añadir los Perros y mostrarlos
+	- Modificar 1 de esos Perros y mostar de nuevo el Array
