@@ -1,0 +1,76 @@
+-- Alberto Gómez Morales - 1º DAW
+-- Examen Tema 6: Explotación de Bases de Datos en oracle
+
+-- Crear la Tabla
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+CREATE USER empresa IDENTIFIED BY empresa;
+GRANT ALL PRIVILEGES TO empresa;
+
+CREATE TABLE Sede (
+  Cod_Sede CHAR(2) PRIMARY KEY,
+  Nombre VARCHAR2(50),
+  Ciudad VARCHAR2(50)
+);
+
+CREATE TABLE Empleado (
+  Cod_Empleado CHAR(2) PRIMARY KEY,
+  Nombre VARCHAR2(50),
+  Apellidos VARCHAR2(50),
+  Encargado CHAR(2),
+  Sede_trabajo CHAR(2),
+  Sueldo NUMBER(6, 0),
+  CONSTRAINT sueldo_rango CHECK (Sueldo >= 1200 AND Sueldo <= 3000),
+  FOREIGN KEY (Encargado) REFERENCES Empleado (Cod_Empleado),
+  FOREIGN KEY (Sede_trabajo) REFERENCES Sede (Cod_Sede)
+);
+
+-- Insertar los Datos
+
+--Sede
+INSERT INTO Sede (Cod_Sede, Nombre, Ciudad)
+VALUES ('S1', 'Leon', 'Madrid');
+
+INSERT INTO Sede (Cod_Sede, Nombre, Ciudad)
+VALUES ('S2', 'Tigre', 'Barcelona');
+
+INSERT INTO Sede (Cod_Sede, Nombre, Ciudad)
+VALUES ('S3', 'Pantera', 'Bilbao');
+
+INSERT INTO Sede (Cod_Sede, Nombre, Ciudad)
+VALUES ('S4', 'Jaguar', 'Sevilla');
+
+INSERT INTO Sede (Cod_Sede, Nombre, Ciudad)
+VALUES ('S5', 'Puma', 'Valencia');
+
+--Empleados / He dejado el empleado C2 sin poner encargado y luego se lo añado
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C1', 'Pedro', 'Toribio', 'C3', 'S1', 1600);
+
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C2', 'Juan', 'Ares',null, 'S1', 1900);
+
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C3', 'Mateo', 'Berrizo', 'C2', 'S2', 1900);
+
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C4', 'Jesús', 'Cea', 'C3', 'S3', 1600);
+
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C5', 'Lucas', 'Dones', 'C3', 'S4', 1500);
+
+INSERT INTO Empleado (Cod_Empleado, Nombre, Apellidos, Encargado, Sede_trabajo, Sueldo)
+VALUES ('C6', 'Manuel', 'Espinosa', 'C3', 'S5', 2000);
+
+-- Añado el encargado que faltaba para este empleado
+UPDATE Empleado set Encargado='C4' WHERE Cod_Empleado='C2';
+
+-- Realizar las siguientes operaciones:
+-- Aumenta el sueldo de todos los empleados en 50 euros.
+
+UPDATE Empleado
+SET Sueldo = Sueldo + 50;
+
+-- Muestra el nombre de todos los empleados junto al nombre de su encargado.
+SELECT empleado.Nombre AS Empleado, encargado.Nombre AS Encargado
+FROM Empleado empleado
+LEFT JOIN Empleado encargado ON empleado.Encargado = encargado.Cod_Empleado;
