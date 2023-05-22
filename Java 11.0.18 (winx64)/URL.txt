@@ -1,0 +1,2 @@
+Windows: https://learn.microsoft.com/en-us/java/openjdk/older-releases#openjdk-11
+RedHat: https://developers.redhat.com/products/openjdk/download
