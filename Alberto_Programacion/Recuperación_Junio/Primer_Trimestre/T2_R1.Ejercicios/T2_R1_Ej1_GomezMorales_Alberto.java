@@ -18,21 +18,21 @@ public class T2_R1_Ej1_GomezMorales_Alberto{
 		/* Variables */
 
 		//a)
-		int c; //Sin valor
-		int estaEsUnaVariable; //Sin valor
-		int q76354; //Sin valor
+		int c;
+		int estaEsUnaVariable;
+		int q76354;
 		int numero;
 
 		//b
-		Scanner teclado = new Scanner(System.in); //Declaro el teclado
+		Scanner teclado = new Scanner(System.in);
 
 		/* Desarrollo del Programa */
-		System.out.print("Introduzca un número para la variable 'numero': "); //Pido valor de entrada para 'numero'
+		System.out.print("Introduzca un número para la variable 'numero': ");
 		numero = teclado.nextInt();	
 
 		//c)
 
-		int entrada; //Creo las variables, pido el valor para 'entrada' y lo paso a 'valor'
+		int entrada;
 		int valor;
 		System.out.println("Introduzca otro número para convertido de la variable entrada a la variable valor: ");
 		entrada = teclado.nextInt();
@@ -54,5 +54,7 @@ public class T2_R1_Ej1_GomezMorales_Alberto{
 		} else {
 			System.out.println("La variable número si es igual a 7");
 		}
+	
+		teclado.close();
 	}
 }
