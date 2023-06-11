@@ -29,56 +29,128 @@
  */
 
  /* Imports */
-import java.util.Scanner;
+ import java.util.Scanner;
+ import java.lang.Math;
 
-public class Resolucion_Ejerc_Recup1Parcial_GomezMorales_Alberto {
-    final static Scanner teclado = new Scanner(System.in);
-    public static void main(String[] args){
-        menu();
-    }
+ public class Resolucion_Ejerc_Recup1Parcial_GomezMorales_Alberto {
+    /* Variables generales */
+    static Scanner teclado = new Scanner(System.in);
+    static int total = 0; //Total de números
+    static int ultimoNumero = 0; //Último número usado
+    static int[] numerosArray = new int[100]; //Array para almacenar y mostrar números
 
-    /* Métodos */
-    private static void menu() {
-        /* Variables */
-        byte opcion;
-        char confirmacion;
-        boolean salir = false;
+    /* Programa */
+     public static void main(String[] args){
+         menu();
+     }
+ 
+    // Métodos
 
-        //Desarrollamos el programa
-        do {
-            menuTexto();
-            opcion = teclado.nextByte();
-            switch (opcion) {
-                case 1:
-                    sumatoria();
-                    break;
+     /* Menú */
+     private static void menu() { //Menú del programa
+         /* Variables */
+         byte opcion;
+         char confirmacion;
+         boolean salir = false;
+ 
+         //Desarrollamos el programa
+         do {
+             menuTexto();
+             opcion = teclado.nextByte();
+             switch (opcion) {
+                 case 1:
+                     sumatoria();
+                     break;
+ 
+                 case 0:
+                     System.out.println("Has elegido salir, ¿estás seguro?(s/n)");
+                     confirmacion = teclado.next().charAt(0);
+                     
+                     if (confirmacion == 's' || confirmacion == 'S') {
+                         System.out.println("\t\t Confirmada su salida del programa. ¡Hasta la próxima!");
+                         salir = true;
+                         break;
+                     }
+                     break;
+ 
+                 default:
+                     System.out.println("Opción no válida. Por favor, selecciona otra opción.");
+             }
+         } while (!salir);
+     }
+ 
+     /* Texto Menu */
+     public static void menuTexto() {
+         System.out.println("\t Menú sumatorio de números");
+         System.out.println("1. Añadir números.");
+         System.out.println("0.Salir.");
+         System.out.println("\tSeleccione una opción por favor.");
+     }
 
-                case 0:
-                    System.out.println("Has elegido salir, ¿estás seguro?(s/n)");
-                    confirmacion = teclado.next().charAt(0);
-                    
-                    if (confirmacion == 's' || confirmacion == 'S') {
-                        System.out.println("\t\t Confirmada su salida del programa. ¡Hasta la próxima!");
-                        salir = true;
-                        break;
-                    }
-                    break;
+     /* Método Sumar */
+     private static void sumatoria() { //Bucle while para sumar los números
+        boolean salida = false;
+        int aux = 0;
+        int numero;
 
-                default:
-                    System.out.println("Opción no válida. Por favor, selecciona otra opción.");
+        while (!salida) {
+            System.out.print("Introduce un número entero (0 para volver al menú): ");
+            numero = teclado.nextInt();
+
+            if (numero == 0) {
+                salida = true;
+                continue;
             }
-        } while (!salir);
+
+            if (esValido(numero)) {
+                total += numero;
+                ultimoNumero = numero;
+                numerosArray[aux] = numero;
+                aux++;
+                System.out.println("Otro más vamos por " + total);
+            } else {
+                System.out.println("Lo siento, no cumple los requisitos");
+            }
+
+            if (total >= 10000) {
+                salida = true;
+            }
+        }
+
+        System.out.println("Total obtenido: " + total);
+        System.out.println("El número que hace sobrepasar el límite es: " + ultimoNumero);
+
+        System.out.println("Números insertados por orden inverso:");
+        mostrarNumerosAlReves(aux);
     }
 
-    /* Texto Menu */
-    public static void menuTexto() {
-        System.out.println("\t Menú sumatorio de números");
-        System.out.println("1. Añadir números.");
-        System.out.println("0.Salir.");
-        System.out.println("\tSeleccione una opción por favor.");
+    /* Validar Número */
+    private static boolean esValido(int numero) { //Compruebo que el número esté entre 0 y 10000 y mando a ver si es primo o no
+        if (numero == 10000 || esPrimo(numero)) {
+            return false;
+        }
+        return true;
     }
 
-    public static void sumatoria(){
-        int[] lista = ;
+    /* Primo Mayor 100 */
+    private static boolean esPrimo(int numero) { //Compruebo si es mayor de 100 y primo
+        if (numero <= 100) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(numero); i++) { //Encontré esta operación en internet, se puede calcular a llegando solo hasta la raiz del número que validamos
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
-}
+
+    /* Mostrar Números */
+    private static void mostrarNumerosAlReves(int aux) {
+        for (int i = aux - 1; i >= 0; i--) {
+            System.out.println(numerosArray[i]);
+        }
+    }
+ }
